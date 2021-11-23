@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="app">
+      <div class="container">
+        <div class="header">
+          <h3>IP Address Tracker</h3>
+  
+          <div>
+            <input type="text" placeholder="Search for any IP address or domain">
+            <button type="button">B</button>
+          </div>
+        
+          <ul>
+            <li>
+              <p>IP Address</p>
+              <strong>192.212.174.101</strong>
+            </li>
+            <li>
+              <p>Location</p>
+              <strong>192.212.174.101</strong>
+            </li>
+            
+            <li>
+              <p>Timezone</p>
+              <strong>UTC -05:00</strong>
+            </li>
+            
+            <li>
+              <p>ISP</p>
+              <strong>SpaceX Starlink</strong>
+            </li>
+          </ul>
+        </div>
+        <div id="map">
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script>
+      function myMap() {
+      var mapProp= {
+        center:new google.maps.LatLng(51.508742,-0.120850),
+        zoom:5,
+      };
+      var map = new google.maps.Map(document.getElementById("map"),mapProp);
+      }
+      </script>
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=myMap&v=weekly"></script>
+      
+</body>
+</html>

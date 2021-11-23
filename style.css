@@ -1,0 +1,122 @@
+@import url(https://fonts.google.com/specimen/Rubik);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    color: hsl(0, 0%, 59%);
+    font-size: 13px;
+    font-family: 'Rubik', sans-serif;
+}
+
+html,body,#root{
+    height: 100%;
+}
+.app{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.container{
+    max-width: 100% ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(155, 155, 155);
+}
+.header{
+    width: 100%;
+    display: flex;
+    height: 240px;
+    align-items: center;
+    flex-direction: column;
+    background: url('./images/pattern-bg.png') no-repeat;
+    background-size: cover;
+    padding: 26px 10px 5px 10px;
+    position: relative;
+}
+.header h3{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.header div{
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    overflow: hidden;
+}
+.header div input[type="text"]{
+height: 100%;
+max-width: 400px;
+width: 100%;
+padding: 6px 10px 6px 10px;
+border: 0;
+border-radius: 10px 0 0 10px;
+}
+.header div button{
+    width: 50px;
+    height: 100%;
+    border: 0;
+    background-color: hsl(0, 0%, 17%);
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+}
+.header ul{
+    z-index: 3;
+    position: absolute;
+    bottom: -50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 800px;
+    width: 96%;
+    background-color: #fff;
+    padding:20px 4px 20px 4px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 2px hsl(0, 0%, 59%);
+}
+.header ul li{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #bbb;
+    padding: 0 12px;
+}
+.header ul li:last-child{
+    border: 0;
+}
+.header ul li p{
+    font-size: 12px;
+}
+.header ul li strong{
+    margin-top: 12px;
+    font-size: 14px;
+    color: hsl(0, 0%, 17%);
+}
+@media(max-width:375px) {
+    .header ul{
+        bottom: -120px;
+       display: flex;
+       flex-direction: column; 
+       padding: 10px 2px;     
+    }
+    .header ul li{
+        border: 0;
+       width: 100%;
+       display: flex;
+       align-items: center;      
+    }
+    .header ul li+li{  
+        margin-top: 8px;   
+    }
+}
+#map{
+    display: flex;
+    flex: 1;
+}
